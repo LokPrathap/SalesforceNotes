@@ -1,0 +1,73 @@
+Salesforce :
+	     Cloud :  Big storage  -IT
+		(Client) Gmail => Internet => Gmail app in Cloud space (Server)
+		 Phone
+		 
+		 
+		 
+		 
+		 Storage
+		 
+		 
+		 Application : Whatapp , Facebook
+		 
+		 Cloud offerings :
+		 
+		 
+		 IAAS (Intfrastracture as a service) AWS , Azure (Service Providers who provide a service to store the data in Cloud)
+		 PAAS (Platform as a Service)  Force.com
+		 SAAS (Software as a Service)  Salesforce CRM
+		 
+		 
+		 CRM : Customer relationship Manager ==> BigBazzar, More, Mall (Customer data)
+		 
+		
+Siebel  ==> CRM ==> On Primse
+
+VP Oracle == 23 == Marc Benioff
+			Salesforce CRM => Not Happy  
+			force.com = Free
+			
+			Salesforce is a CRM
+			fORCE.COM IS  Platform
+			
+			Salesforce.com (SFDC)
+			
+			Create a deveoper edition account == >  Zero rupees
+			
+			
+			Object : It is a data table
+			DataType : Type of data which should store 
+			Tab : Is a link that navigates to Object
+			
+			
+		DataType :
+					Read-only datatype
+								Autonumber 
+								Formula
+								Rollup Summary
+							
+								
+					Relationship datatype
+								Lookup
+								Master detail
+								Many to Many
+					
+					Generic datatype
+								Currency
+								Text
+								Number
+								URL
+								Email
+								Checkbox
+								Picklist
+								multipicklist
+								Text Long 
+								Radio
+			
+			
+			
+			
+			
+			
+			

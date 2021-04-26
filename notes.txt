@@ -1,0 +1,119 @@
+App is aApplication which consists of group of objects, tabs 
+
+Object is a Datatable
+
+Tab - its a link to access objects
+
+Fields - its a name of the column in a data table
+
+Records - Values corresponding to each fields in row forms a records
+
+Apex - Controller end logic
+
+Custom app and console app 
+
+
+Datatype :
+
+	Catagories 
+		
+			Read only   
+				Autonumber : 1CH -
+				formula	 : A+B = C ==> 1+1 = C=>2 =>
+				Rollup summary 
+			
+**************			
+			Relationships
+				
+				Look up (1:n) : Linking 2 objects
+				Master detail (1:n) : Parent to child relationship
+								if record already existing ==> Lookup relationship=> populate parent records in loopup and save => convert to master detail
+			
+			
+			
+			Difference between Lookup & Master detail
+			
+					Lookup									Master detail
+					--------								--------------
+					Loose coupled                    		Tightly coupled
+					Parent is independent					Parent is dependent
+					Rollup summary can not be created		Rollup summary can be created(Parent Object)
+					Record owner can be different			Owner for child record is same as parent record
+					Cascade delete is not possible			Cascade delete is possible			
+			
+			
+			Is it possible to change lookup to master details => Yes but if there is a records exisiting we need to populate values and save.
+			Is it possible to change  master detail to lookup => Yes  but Rollup summery field should not be there
+**************
+			
+			Generic :
+			
+				Nmuber
+				curency
+				15+ datatypes
+
+
+
+				Number
+				text
+					Date
+						Date & time
+						
+			
+			
+			Object  :  DataTable
+					
+					Student_data__c
+					
+					
+						Text , number ,autonumber , email
+						
+						
+						
+						
+						
+						
+						Relationships :
+						
+							Lookup  (1: n)
+							Master detail (1:n)
+							Many to Many (Junction Object) (n:n)
+							
+								Creating a relationship between 2 objects using Junction object
+								
+						
+						
+						Software Development life cycle (SDLC)  :
+						
+								BA --> Customer requirement --> Business document(Technial document)
+								Developer ---> Application develop--> Unit test
+								Test Engineers-----> Testing
+								end user(Customer) ----->User acceptance test(UAT) Signoff
+								Customers ------> Golive (Production)
+		
+			
+						Sandbox :
+							Developer 
+							Developer Pro
+							Partial copy sandbox
+							Full sanbox
+							
+				(Permission sets & Field level security (FLS))	 Profile : is a level of permission to access Apps,Object,fields etc
+							 Role : Role control record level access 
+							 
+							 
+							 OWD => Org Wide default  = > Throughout Org what should be the record level access
+							 
+							 Private => Only Owner can see or modify the record based of Profile level permissions
+							 Public read only => Anyone can only 
+							 Public read / Write = > ANYONE CAN MODIFY
+							 Public read / Write / tRANSFER = >  Anyone can modify and change the owner
+							 
+							 Manual => owd - private / public read only
+							 
+							 
+							 
+							 
+							 
+							 
+
