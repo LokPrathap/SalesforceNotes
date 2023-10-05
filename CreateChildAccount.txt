@@ -1,0 +1,27 @@
+Trigger:
+trigger CreateChildAccount on Account (after update) {
+  if (Trigger.isAfter && Trigger.isUpdate) {
+    for (Account account : Trigger.new) {
+      CreateChildAccountHandler.handleAccountStatusUpdate();
+      }
+    }
+}
+
+
+
+Handler:
+public class CreateChildAccountHandler {
+    public static void handleAccountStatusUpdate(Account account) {
+        // Check if the account's status is 'Cold'
+        if (account.Status == 'Cold') {
+            // Create a new child account record
+            Account childAccount = new Account();
+            childAccount.Name = account.Name + '-child';
+            childAccount.ParentId = account.Id;
+            childAccount.Status = 'Cold';
+            // Insert the child account record
+            insert childAccount;
+        }
+    }
+}
+

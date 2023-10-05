@@ -1,0 +1,40 @@
+import { LightningElement, api } from 'lwc';
+import { getChildAccounts, getContacts } from 'AccountDetailController';
+const childAccountColumns = [
+    { label: 'Name', fieldName: 'Name' },
+    { label: 'Status', fieldName: 'Status' },
+    { label: 'Annual Revenue', fieldName: 'AnnualRevenue', type: 'currency' },
+    { label: 'Created Date', fieldName: 'CreatedDate', type: 'date' }
+];
+const contactColumns = [
+    { label: 'Name', fieldName: 'Name' },
+    { label: 'Do Not Call', fieldName: 'DoNotCall', type: 'boolean' },
+    { label: 'Email', fieldName: 'Email' },
+    { label: 'Created Date', fieldName: 'CreatedDate', type: 'date' }
+];
+export default class AccountDetail extends LightningElement {
+    @api recordId;
+    childAccounts;
+    contacts;
+    connectedCallback() {
+        this.loadChildAccounts();
+        this.loadContacts();
+    }
+    loadChildAccounts() {
+        getChildAccounts({ accountId: this.recordId })
+            .then(result => {
+                this.childAccounts = result;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+    loadContacts() {
+        getContacts({ accountId: this.recordId })
+            .then(result => {
+                this.contacts = result;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
